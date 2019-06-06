@@ -79,7 +79,7 @@
 #  
 #  Local IP addresses (such as 127.0.0.1 and ::1) are allowed as local, along
 #  with hostnames configured in local_hostnames.
-#c.NotebookApp.allow_remote_access = False
+c.NotebookApp.allow_remote_access = True
 
 ## Whether to allow the user to run the notebook as root.
 #c.NotebookApp.allow_root = False
@@ -201,7 +201,8 @@
 #c.NotebookApp.iopub_msg_rate_limit = 1000
 
 ## The IP address the notebook server will listen on.
-c.NotebookApp.ip = '*'
+#c.NotebookApp.ip = '*'
+c.NotebookApp.ip = '0.0.0.0'
 
 ## Supply extra arguments that will be passed to Jinja environment.
 #c.NotebookApp.jinja_environment_options = {}
@@ -284,7 +285,7 @@ c.NotebookApp.password = u'sha1:1b32d9269feb:f708967450b83c958ed0f5845696a065633
 #c.NotebookApp.password_required = False
 
 ## The port the notebook server will listen on.
-c.NotebookApp.port = 8888
+c.NotebookApp.port = 80
 
 ## The number of additional ports to try if the specified port is not available.
 #c.NotebookApp.port_retries = 50
